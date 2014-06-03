@@ -8,6 +8,17 @@ This application has four files:
 *  template.html: the view for every task and deal with the data of the answers.
 *  tutorial.html: a simple tutorial for the volunteers.
 
+Funded by
+=========
+![AHRC funded](http://oac.lib.bris.ac.uk/Dserve/images/AHRC%20Logo%20Gray%20LScape2.JPG)
+
+Funded Partners
+===============
+![British Museum](http://finds.org.uk/images/logos/bm_logo.png)
+![UCL](http://crowdsourced.micropasts.org/static/img/black.jpg)
+![Portable Antiquities Scheme](http://www.dayofarchaeology.com/wp-content/uploads/2011/05/pasrgbsize4.jpg)  
+
+
 Testing the application
 =======================
 
@@ -29,6 +40,24 @@ Documentation
 We recommend that you read the section: [Build with PyBossa](http://docs.pybossa.com/en/latest/build_with_pybossa.html) and follow the [step by step tutorial](http://docs.pybossa.com/en/latest/user/tutorial.html).
 
 **NOTE**: This application uses the [pybossa-client](https://pypi.python.org/pypi/pybossa-client) in order to simplify the development of the application and its usage. Check the [documentation](http://pythonhosted.org/pybossa-client/).
+
+Creating app and adding image tasks
+==================
+
+After adding images to flickr, determine the set number and run the following command:
+
+```bash
+    $python createTasks.py -k APIKEY -s SERVERURL -c -x -i SETNUMBER
+```
+
+Adding more images
+==================
+
+To just add images:
+
+```bash
+    $python createTasks.py -k APIKEY -s SERVERURL -x -i SETNUMBER
+```
 
 Updating template
 =================
